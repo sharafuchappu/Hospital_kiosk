@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+
+    <style>
+
+        .welcome-text {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .welcome-text h1 {
+            font-size: 2.5rem;
+            color: #004085;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        .welcome-text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    
+        .welcome-text h2 {
+            font-size: 1.5rem;
+            color: #0056b3;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+    
+
+{% block title%}
+About
+{%endblock%}
+
+{%block content%}
+<h1 class="text-center">About Us</h1>
+<hr>
+<div class="welcome-text px-5">
+    <h1 class="text-center">Welcome to City Hospital</h1>
+    <br>
+    <p style="font-size: large; color:red;">At City Hospital, we are dedicated to providing exceptional healthcare with compassion and expertise. Our state-of-the-art facility offers a wide range of medical services, including emergency care, specialized treatments, and preventive care, all delivered by our highly skilled team of doctors, nurses, and support staff.</p>
+    
+    <p style="font-size: large; color:red;">Founded with the mission to deliver quality healthcare in a caring and respectful environment, City Hospital combines advanced medical technology with personalized patient care. Our team is committed to improving the health and well-being of our community through innovative practices, a patient-centered approach, and continuous advancement in medical knowledge.</p>
+    
+    <p style="font-size: large; color:red;">Whether you need routine care or specialized treatment, City Hospital is here to support you and your family with the highest standard of medical care. Your health and comfort are our top priorities.</p>
+
+    <h6>City Hospital</h6>
+    <p>Providing care that matters.</p>
+    <br>
+
+</div>
+
+{% endblock%}

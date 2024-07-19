@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<style>
+  /* Animation for image fade-in effect */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Animation for text appearance */
+  .animate-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 5s ease-out forwards;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animation for carousel items */
+  .carousel-item.fade-in {
+    opacity: 0;
+    animation: fadeInCarousel 2s ease-in-out forwards;
+  }
+
+  @keyframes fadeInCarousel {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Animation for service sections */
+  .fade-in-section {
+    opacity: 0;
+    animation: fadeInSection 3s ease-in-out forwards;
+  }
+
+  @keyframes fadeInSection {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 2s ease-out forwards;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .card-spacing {
+    margin-bottom: 20px; /* Adjust the value to set the desired spacing */
+  }
+  
+
+  /* Optional: Background with transparency for better readability */
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0.5rem;
+    max-width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+</style>
+
+
+
+<main role="main" class="flex-shrink-0">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container-fluid px-0">
+      <div class="position-relative">
+        <img src="{% static 'images/analysis-hospital-doctor-medical.jpg' %}" alt="City Hospital" class="img-fluid w-100 fade-in">
+        <div class="hero-text position-absolute top-50 start-50 translate-middle text-center text-dark animate-text">
+          <h1 class="py-2">Welcome to City Hospital</h1>
+          <p>Your health and well-being are our top priorities. Discover our state-of-the-art facilities and exceptional care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <div id="carouselExampleDark" class="carousel carousel-dark slide py-3" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active fade-in" data-bs-interval="10000">
+        <img src="{% static 'images/car1.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item fade-in" data-bs-interval="2000">
+        <img src="{% static 'images/car2.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item fade-in">
+        <img src="{% static 'images/car3.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> -->
+
+  <!-- Information Section -->
+  <section class="info-section py-3">
+    <div class="container bg-light">
+      <div class="row">
+        <div class="col-md-6 fade-in-section mb-4"> <!-- Add a bottom margin here -->
+          <h2 class="text-center">Our Services</h2>
+          <p class="description">At City Hospital, we offer a comprehensive range of medical services, including emergency care, specialized treatments, and preventive services. Our dedicated team is here to provide the highest quality of care in a compassionate and respectful environment.</p>
+          <img src="{% static 'images/various-doctor-hospital-medical.jpg' %}" alt="Our Services" class="img-fluid">
+        </div>
+        <div class="col-md-6 fade-in-section">
+          <h2 class="text-center">Meet Our Experts</h2>
+          <p class="description">Our team of highly skilled doctors and healthcare professionals is committed to delivering personalized care and innovative treatments. Learn more about our specialists and how they can assist you in achieving your health goals.</p>
+          <img src="{% static 'images/HD-wallpaper-health-doctor-hospital-healthtips-doctor-health.jpg' %}" alt="Our Experts" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+
+</main>
+{% endblock %}
